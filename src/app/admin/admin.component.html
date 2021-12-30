@@ -1,0 +1,46 @@
+
+<mat-toolbar color="primary">
+    <mat-icon>ADMIN FORM</mat-icon>
+    </mat-toolbar>
+    <mat-card>
+        <form #templateForm="ngForm" (ngSubmit)="submitTemplateForm(templateForm.value)">
+            <p>
+                <label for="firstname">Firstname:</label>
+                <input type="text" name="firstname" required #firstName="ngModel" ngModel><br>
+                <span *ngIf="firstName.touched && firstName.invalid" class="alert alert-danger" role="alert">first name is invalid</span>
+            </p>
+            <p>
+                <label for="lastname">Lastname:</label>
+                <input type="text" name="lastname" required #lastName="ngModel" ngModel><br>
+                <span *ngIf="lastName.touched && lastName.invalid" class="alert alert-danger" role="alert">lastName name is invalid</span>
+            </p>
+            <p>
+                <label for="email">Email:</label>
+                <input type="text" name="email" required email #email="ngModel" ngModel><br>
+                <span *ngIf="email.touched && email.invalid" class="alert alert-danger" role="alert">Enter your email</span>
+            </p>
+            <p>
+                <label for="password">password:</label>
+                <input type="password" name="password" required minlength="5" maxlength="10" #password="ngModel" ngModel><br>
+                <span *ngIf="password.touched && password.invalid" class="alert alert-danger" role="alert">Password is invalid</span>
+            </p>
+            <p>
+                <label for="gender">Gender:</label>
+               Male<input type="radio" name="male" value="male" #male="ngModel" ngModel>
+               Female<input type="radio" name="female" value="female" #female="ngModel" ngModel>
+               
+            </p>
+            <p>
+                <label for="checkbox">I agree</label>
+                <input type="checkbox" name="agree" required #checkbox="ngModel" ngModel>
+                <span *ngIf="checkbox.touched && checkbox.invalid" class="alert alert-danger" role="alert">please agree the term and conditions</span>
+            </p>
+            <p>
+                <button type="submit" [disabled]="templateForm.invalid" class="btb-primary">submit</button>
+            </p>
+            </form>
+        <a class="a" routerLink="/home">Back to home</a><br>
+    </mat-card>
+        <mat-toolbar color="primary" class="footer">&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;&nbsp;</mat-toolbar>
+  

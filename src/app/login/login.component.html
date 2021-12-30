@@ -1,0 +1,37 @@
+<section>
+<mat-toolbar color="primary">
+<mat-icon>WELCOME TO STUDENT LOGIN FORM</mat-icon>
+</mat-toolbar>
+<mat-card>
+  <form #templateForm="ngForm" (ngSubmit)="submitTemplateForm(templateForm.value)">
+    <p>
+        <label for="email">Email:</label>
+        <input type="text" name="email" required email #email="ngModel" ngModel><br>
+        <span *ngIf="email.touched && email.invalid" class="alert alert-danger" role="alert">Enter your email</span>
+        
+    </p><br>
+    <p>
+      <label for="number">Number:</label>
+      <input type="number" name="number" required minlength="5" maxlength="10" #number="ngModel" ngModel><br>
+      <span *ngIf="number.touched && number.invalid" class="alert alert-danger" role="alert">Number is invalid</span>
+  </p><br>
+    <p>
+        <label for="password">password:</label>
+        <input type="password" name="password" required minlength="5" maxlength="10" #password="ngModel" ngModel><br>
+        <span *ngIf="password.touched && password.invalid" class="alert alert-danger" role="alert">Password is invalid</span>
+    </p><br>
+    
+    <p>
+        <button mat-raised-button type="submit" [disabled]="templateForm.invalid" class="btn-primary">submit</button>
+      </p>
+    </form>
+    <a routerLink="/home">Back to home</a>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a routerLink="/admin">AdminForm--></a>
+  </mat-card>
+</section>
+    <mat-toolbar color="primary" class="footer">&nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;&nbsp;</mat-toolbar>

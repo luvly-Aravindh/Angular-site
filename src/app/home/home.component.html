@@ -1,0 +1,42 @@
+<section>
+  <mat-toolbar color="primary">
+    <button mat-icon-button  aria-label="Example icon-button with menu icon">
+     <mat-icon>menu</mat-icon>
+   </button>
+   <span>Student Portal Login</span>
+ </mat-toolbar>
+ <mat-card>IBM oranganization <br>HTM layout <br>Bengaluru <br><br>contact us</mat-card>
+    <button mat-raised-button color="primary" class="btn">
+    <a routerLink="/login">LOGIN</a></button>
+    <button mat-raised-button color="primary" class="btn2">
+    <a routerLink="/admin">ADMIN</a></button>
+<mat-form-field appearance="fill">
+  <mat-label>Angular</mat-label>
+  <mat-select>
+    <mat-option *ngFor="let angular of angular" [value]="angular.value">
+      {{angular.viewValue}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field appearance="fill">
+    <mat-label>React</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let react of react" [value]="react.value">
+        {{react.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Vue.js</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let Vue of Vue" [value]="Vue.value">
+        {{Vue.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-toolbar color="primary" class="footer">&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;Contact us&nbsp;&nbsp;&nbsp;&nbsp;About us&nbsp;&nbsp;&nbsp;&nbsp;</mat-toolbar>
+</section>
+<h2 style="text-align: center;">@copyright-2021</h2>

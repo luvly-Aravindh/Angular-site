@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+mat-toolbar{
+    width: 40%;
+    font-size: 32px;
+    margin-left: 400px;
+    margin-top: 50px;
+}
+mat-toolbar mat-icon{
+
+    font-weight: 800;
+    font-size: 28px;
+    margin-left: -8px;
+    line-height: 10px;
+}
+mat-card{
+    width: 40%;
+    height: 50%;
+    font-size: 20px;
+    margin-left: 400px;
+ }
+ form{
+     text-align: center;
+     
+ }
+ form input{
+     width: 30%;
+     height: 30%;
+ }
+ .btn{
+    margin-left: 200px;
+    margin-top: 10px;
+    width: 20%;
+ }
+ .btn a{
+    text-decoration: none;
+    color: white;
+  
+}
+.btn:hover{
+    background: black;
+}
+a{
+    text-decoration: none;
+}
+.footer{
+    margin-top: 0px;
+    color: black;
+}
+@media screen and (max-width: 768px){
+    mat-toolbar{
+        width: 100%;
+        font-size: 32px;
+        margin-left:0px;
+        margin-top: 50px;
+    }
+    mat-toolbar mat-icon{
+    
+        font-weight: 800;
+        font-size: 24px;
+        margin-left: 0px;
+        line-height: 10px;
+    }
+    mat-card{
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        margin-left: 0px;
+     }
+     form{
+         text-align: center;
+         
+     }
+     form input{
+         width: 100%;
+         height: 100%;
+     }
+     .btn{
+        margin-left: 0px;
+        margin-top: 10px;
+        width: 20%;
+     }
+     .btn a{
+        text-decoration: none;
+        color: white;
+    }
+    .btn:hover{
+        background: black;
+    }
+    a{
+        text-decoration: none;
+    }
+    .footer{
+        margin-top: 0px;
+        color: rgb(248, 242, 242);
+        text-align: center;
+    }
+}
